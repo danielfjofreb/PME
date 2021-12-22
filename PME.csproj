@@ -71,7 +71,7 @@
     <Content Include="css\Galería.css" />
     <Content Include="css\Inicio.css" />
     <Content Include="css\EstilosInicio.css" />
-    <Content Include="css\Nuestra-Escuela.css" />
+    <Content Include="css\Login.css" />
     <Content Include="images\206bd1bade0da77f46b9a746227543e7fbaa6337b92802088d3a81ba70ea6d5049000c3aa04769e7fdae781c65fe9df828d1eeb633d1da2cfd7292_1280.jpg" />
     <Content Include="images\4.jpeg" />
     <Content Include="images\5.jpeg" />
@@ -79,8 +79,10 @@
     <Content Include="images\default-image.jpg" />
     <Content Include="images\Rompecabezas.jpg" />
     <Content Include="index.html" />
+    <Content Include="js\Extras.js" />
     <Content Include="js\jquery.js" />
-    <Content Include="js\Plantilla.js" />
+    <Content Include="js\PlantillaInicio.js" />
+    <Content Include="Paginas\Gestion-Pedagogic\Login.aspx" />
     <Content Include="Paginas\Inicio\Contacto.html" />
     <Content Include="Paginas\Inicio\Galería.html" />
     <Content Include="Paginas\Inicio\Inicio.html" />
@@ -88,6 +90,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Paginas\Gestion-Pedagogic\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Gestion-Pedagogic\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
