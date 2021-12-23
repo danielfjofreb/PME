@@ -44,7 +44,7 @@
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkEstadoAccion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Estado-de-la-Acción.aspx" style="padding: 10px 22px;">Estado de la Acción</asp:HyperLink>
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkRendicion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Rendición.aspx" style="padding: 10px 22px;">Rendición</asp:HyperLink>
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkSeguimiento" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Seguimiento.aspx" style="padding: 10px 22px;">Seguimiento</asp:HyperLink>
-</li><li class="u-nav-item"><asp:Button runat="server" ID="btnCerrarSesion" class="u-button-style u-file-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px;" Text="Cerrar Sesión"/>
+</li><li class="u-nav-item"><asp:Button runat="server" ID="btnCerrarSesion" class="u-button-style u-file-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px;" Text="Cerrar Sesión" OnClick="btnCerrarSesion_Click"/>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
