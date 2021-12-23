@@ -24,7 +24,6 @@ namespace PME.Paginas.Gestion_Pedagogic
             {
                 this.Session["user"] = ddlCargo.SelectedValue;
                 this.Session["pass"] = txtPass.Text;
-
             }
             else
             {
