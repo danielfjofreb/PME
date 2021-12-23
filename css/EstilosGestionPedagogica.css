@@ -16682,9 +16682,9 @@ h6 {
   font-size: 1.125rem;
 }
 p {
-  margin-top: 0;
-  padding: 0;
-  margin-bottom: 0.5rem;
+  /* margin-top: 0; */
+  /* padding: 0px; */
+  /* margin-bottom: 0.5rem; */
 }
 .u-uppercase {
   text-transform: uppercase;

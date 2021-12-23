@@ -1,20 +1,21 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Accion.aspx.cs" Inherits="PME.Paginas.Gestion_Pedagogic.Accion" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Rendicion.aspx.cs" Inherits="PME.Paginas.Gestion_Pedagogic.Rendicion" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-size: 16px;" lang="es-CL">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta name="page_type" content="np-template-header-footer-from-plugin"/>
-    <title>Acción</title>
+    <title>Rendición</title>
     <link rel="stylesheet" href="../../css/EstilosGestionPedagogica.css" media="screen"/>
-    <link rel="stylesheet" href="../../css/Acción.css" media="screen"/>
+<link rel="stylesheet" href="../../css/Rendición.css" media="screen">
     <script class="u-script" type="text/javascript" src="../../js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="../../js/PlantillaGestionPedagogica.js" defer=""></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"/>
+    
     
     
     <script type="application/ld+json">{
@@ -22,12 +23,12 @@
 		"@type": "Organization",
 		"name": "Gestión Pedagógica"
 }</script>
-    <meta property="og:title" content="Acción"/>
+    <meta property="og:title" content="Rendición"/>
     <meta property="og:type" content="website"/>
     <meta name="theme-color" content="#478ac9"/>
 </head>
 <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-bb65"><div class="u-clearfix u-sheet u-sheet-1">
-    <form id="FormAccion" runat="server">
+    <form id="FormRendicion" runat="server">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-position="">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-1-base" href="#">
@@ -64,52 +65,55 @@
           </div>
         </nav>
       </div></header>
-    <section class="u-clearfix u-section-1" id="sec-d53b">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-border-2 u-border-grey-60 u-container-style u-gradient u-group u-group-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
+    <section class="u-clearfix u-section-1" id="sec-1e9e">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-align-left u-border-2 u-border-grey-60 u-container-style u-expanded-width u-gradient u-group u-group-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
           <div class="u-container-layout u-container-layout-1">
-            <p class="u-text u-text-1">Crear acción</p>
-            <h6 class="u-text u-text-2">Nombre de la acción</h6>
-            <h6 class="u-text u-text-3">Recursos y cantidad</h6>
-            <div class="u-table u-table-responsive u-table-1">
-            <asp:GridView ID="GVAccion" runat="server" class="u-table-entity">
+            <div class="u-clearfix u-custom-html u-custom-html-1">
+              <asp:DropDownList runat="server" ID="ddlAccion">
+                  <asp:ListItem>Acción 1</asp:ListItem>
+                  <asp:ListItem>Acción 2</asp:ListItem>
+                  <asp:ListItem>Acción 3</asp:ListItem>
+                  <asp:ListItem>Acción 4</asp:ListItem>
 
-            </asp:GridView>
-              <!--<table class="u-table-entity">
+              </asp:DropDownList>
+            </div>
+            <div class="u-table u-table-responsive u-table-1">
+              <table class="u-table-entity">
                 <colgroup>
-                  <col width="66.5%">
-                  <col width="33.5%">
+                  <col width="17.8%">
+                  <col width="82.2%">
                 </colgroup>
-                <thead class="u-black u-table-header u-table-header-1">
-                  <tr style="height: 50px;">
-                    <th class="u-border-1 u-border-black u-table-cell">Nombre del recurso</th>
-                    <th class="u-border-1 u-border-black u-table-cell">Cantidad</th>
+                <tbody class="u-table-body">
+                  <tr style="height: 67px;">
+                    <td class="u-table-cell">Acción:</td>
+                    <td class="u-table-cell"><asp:TextBox ID="txtAcción" runat="server" placeholder="Acción" required/></td>
                   </tr>
-                </thead>
-                <tbody class="u-table-alt-grey-5 u-table-body">
-                  <tr style="height: 32px;">
-                    <td class="u-border-1 u-border-grey-30 u-first-column u-grey-50 u-table-cell u-table-cell-3">Recurso 1</td>
-                    <td class="u-border-1 u-border-grey-30 u-table-cell">15</td>
+                  <tr style="height: 67px;">
+                    <td class="u-table-cell">Recurso/s:</td>
+                    <td class="u-table-cell"><asp:TextBox ID="txtRecursos" runat="server" placeholder="Recurso/s" required/></td>
                   </tr>
-                  <tr style="height: 32px;">
-                    <td class="u-border-1 u-border-grey-30 u-first-column u-grey-50 u-table-cell u-table-cell-5">Row 2</td>
-                    <td class="u-border-1 u-border-grey-30 u-table-cell">2</td>
+                  <tr style="height: 67px;">
+                    <td class="u-table-cell">Cantidad</td>
+                    <td class="u-table-cell"><asp:TextBox ID="txtCantidad" runat="server" placeholder="Cantidad" TextMode="Number" required/></td>
                   </tr>
-                  <tr style="height: 32px;">
-                    <td class="u-border-1 u-border-grey-30 u-first-column u-grey-50 u-table-cell u-table-cell-7">Row 3</td>
-                    <td class="u-border-1 u-border-grey-30 u-table-cell">66</td>
-                  </tr>
-                  <tr style="height: 32px;">
-                    <td class="u-border-1 u-border-grey-30 u-first-column u-grey-50 u-table-cell u-table-cell-9">Row 4</td>
-                    <td class="u-border-1 u-border-grey-30 u-table-cell">42</td>
+                  <tr style="height: 104px;">
+                    <td class="u-table-cell">Valor unidad:</td>
+                    <td class="u-table-cell"><asp:TextBox ID="txtValor" runat="server" placeholder="Valor unidad" TextMode="Number" required/></td>
                   </tr>
                 </tbody>
-              </table>-->
+              </table>
             </div>
-            <asp:Button ID="btnEnviar" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1" Text="Enviar a validar" OnClick="btnEnviar_Click"/>
+              <p style="padding-left: 63%;padding-bottom: 2%;">Adjuntar factura de respaldo</p>
+            <asp:FileUpload ID="FUAdjuntarFacturaR" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-1" ToolTip="Adjuntar Factura Respaldo"/>
+            <asp:Button ID="btnGuardarYAgregar" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2" Text="Guardar y agregar un nuevo recurso"/>
+            <asp:Button  ID="btnGuardar" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-3" Text="Guardar"/>
           </div>
         </div>
       </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="sec-8dea">
+      <div class="u-clearfix u-sheet u-sheet-1"></div>
     </section>
     </form>
     

@@ -91,6 +91,8 @@
     <Content Include="js\PlantillaInicio.js" />
     <Content Include="Paginas\Gestion-Pedagogic\Accion.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Paginas\Gestion-Pedagogic\Estado-de-la-accion.aspx" />
+    <Content Include="Paginas\Gestion-Pedagogic\Rendicion.aspx" />
     <Content Include="Paginas\Gestion-Pedagogic\Vista-Area.aspx" />
     <Content Include="Paginas\Inicio\Contacto.html" />
     <Content Include="Paginas\Inicio\Galería.html" />
@@ -112,6 +114,20 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Gestion-Pedagogic\Estado-de-la-accion.aspx.cs">
+      <DependentUpon>Estado-de-la-accion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Gestion-Pedagogic\Estado-de-la-accion.aspx.designer.cs">
+      <DependentUpon>Estado-de-la-accion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Gestion-Pedagogic\Rendicion.aspx.cs">
+      <DependentUpon>Rendicion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Gestion-Pedagogic\Rendicion.aspx.designer.cs">
+      <DependentUpon>Rendicion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Gestion-Pedagogic\Vista-Area.aspx.cs">
       <DependentUpon>Vista-Area.aspx</DependentUpon>

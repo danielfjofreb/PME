@@ -11,17 +11,17 @@ namespace PME.Paginas.Gestion_Pedagogic
 {
 
 
-    public partial class Accion
+    public partial class EstadoAccion
     {
 
         /// <summary>
-        /// Control FormAccion.
+        /// Control FormEstadoAccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm FormAccion;
+        protected global::System.Web.UI.HtmlControls.HtmlForm FormEstadoAccion;
 
         /// <summary>
         /// Control LinkVistaArea.
@@ -78,30 +78,21 @@ namespace PME.Paginas.Gestion_Pedagogic
         protected global::System.Web.UI.WebControls.Button btnCerrarSesion;
 
         /// <summary>
-        /// Control btnCerrarSesion2.
+        /// Control btnEnviarAccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCerrarSesion2;
+        protected global::System.Web.UI.WebControls.Button btnEnviarAccion;
 
         /// <summary>
-        /// Control GVAccion.
+        /// Control GVEstadoAccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVAccion;
-
-        /// <summary>
-        /// Control btnEnviar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEnviar;
+        protected global::System.Web.UI.WebControls.GridView GVEstadoAccion;
     }
 }
