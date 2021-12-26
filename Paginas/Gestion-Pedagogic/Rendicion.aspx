@@ -110,6 +110,7 @@
             <asp:Button  ID="btnGuardar" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-3" Text="Guardar"/>
           </div>
         </div>
+          <asp:SqlDataSource ID="SqlDSRendicion" runat="server"></asp:SqlDataSource>
       </div>
     </section>
     <section class="u-align-center u-clearfix u-section-2" id="sec-8dea">

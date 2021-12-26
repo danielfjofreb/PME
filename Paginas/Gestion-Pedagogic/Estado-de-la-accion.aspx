@@ -71,7 +71,13 @@
             <p class="u-text u-text-1">Estado de la acción</p>
             <asp:Button ID="btnEnviarAccion" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1" Text="Enviar Acción" OnClick="btnEnviarAccion_Click"/>
             <div class="u-table u-table-responsive u-table-1">
-                <asp:GridView runat="server" ID="GVEstadoAccion" class="u-table-entity">
+                <asp:GridView runat="server" ID="GVEstadoAccion" class="u-table-entity" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDSEstadoAccion">
+                    <Columns>
+                        <asp:BoundField DataField="descripcionAccion" HeaderText="Nombre de la acción" SortExpression="descripcionAccion" />
+                        <asp:BoundField DataField="descripcionRecurso" HeaderText="Recurso" SortExpression="descripcionRecurso" />
+                        <asp:BoundField DataField="cantidadRecurso" HeaderText="Cantidad" SortExpression="cantidadRecurso" />
+                        <asp:BoundField DataField="EstadoAcciones" HeaderText="Estado" SortExpression="EstadoAcciones" />
+                    </Columns>
 
                 </asp:GridView>
               <!--<table class="u-table-entity">
@@ -120,6 +126,7 @@
             </div>
           </div>
         </div>
+          <asp:SqlDataSource ID="SqlDSEstadoAccion" runat="server" ConnectionString="<%$ ConnectionStrings:PlanMejoramientoEConnectionString %>" SelectCommand="SELECT Acciones.descripcionAccion, Recursos.descripcionRecurso, Expediente.cantidadRecurso, Expediente.EstadoAcciones FROM Acciones INNER JOIN Expediente ON Acciones.idAccion = Expediente.IDAccion INNER JOIN Recursos ON Expediente.IDRecurso = Recursos.idRecurso"></asp:SqlDataSource>
       </div>
     </section>
     </form>
