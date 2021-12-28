@@ -39,12 +39,12 @@
           </div>
         <form id="FormEstadoAccion" runat="server">
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><asp:HyperLink runat="server" ID="LinkVistaArea" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Vista-Area.aspx" style="padding: 10px 22px;">Vista Área</asp:HyperLink>
-</li><li class="u-nav-item"><asp:HyperLink ID="LinkAccion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Accion.aspx">Acción</asp:HyperLink>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><asp:HyperLink ID="LinkVistaArea" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px;" NavigateUrl="~/Paginas/Gestion-Pedagogic/Vista-Area.aspx">Vista Área</asp:HyperLink>
+</li><li class="u-nav-item"><asp:HyperLink ID="LinkAccion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Accion.aspx" style="padding: 10px 22px;">Acción</asp:HyperLink>
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkEstadoAccion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Estado-de-la-Accion.aspx" style="padding: 10px 22px;">Estado de la Acción</asp:HyperLink>
-</li><li class="u-nav-item"><asp:HyperLink ID="LinkRendicion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Rendición.aspx" style="padding: 10px 22px;">Rendición</asp:HyperLink>
+</li><li class="u-nav-item"><asp:HyperLink ID="LinkRendicion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Rendicion.aspx" style="padding: 10px 22px;">Rendición</asp:HyperLink>
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkSeguimiento" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Seguimiento.aspx" style="padding: 10px 22px;">Seguimiento</asp:HyperLink>
-</li><li class="u-nav-item"><asp:Button runat="server" ID="btnCerrarSesion" class="u-button-style u-file-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px;" Text="Cerrar Sesión" OnClick="btnCerrarSesion_Click"/>
+</li><li class="u-nav-item"><asp:Button ID="btnCerrarSesion" runat="server" class="u-button-style u-file-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px" Text="Cerrar Sesión" OnClick="btnCerrarSesion_Click"/>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -54,9 +54,9 @@
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Vista-Area.aspx" style="padding: 10px 22px;">Vista Área</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Accion.aspx" style="padding: 10px 22px;">Acción</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Estado-de-la-Accion.aspx" style="padding: 10px 22px;">Estado de la Acción</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Rendición.html" style="padding: 10px 22px;">Rendición</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Seguimiento.html" style="padding: 10px 22px;">Seguimiento</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="files/perfil.png" style="padding: 10px 22px;">Cerrar Sesión</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Rendicion.aspx" style="padding: 10px 22px;">Rendición</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Seguimiento.aspx" style="padding: 10px 22px;">Seguimiento</a>
+</li><li class="u-nav-item"><asp:Button ID="btnCerrarSesion2" runat="server" class="u-button-style u-nav-link" style="padding: 10px 22px;" Text="Cerrar Sesión" OnClick="btnCerrarSesion_Click"/>
 </li></ul>
               </div>
             </div>

@@ -24,10 +24,12 @@ namespace PME.Paginas.Gestion_Pedagogic
             {
                 this.Session["user"] = ddlCargo.SelectedValue;
                 this.Session["pass"] = txtPass.Text;
+                Response.Redirect("Paginas/Gestion-Pedagogic/Vista-Area.aspx");
             }
             else
             {
                 ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "alert", "alert('Combinacion de usuario/contraseña incorrectos')", true);
+                this.Session.Clear();
             }
         }
     }

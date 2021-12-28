@@ -14,7 +14,7 @@ namespace PME.Paginas.Gestion_Pedagogic
         {
             if (this.Session["user"] == null && this.Session["pass"] == null)
             {
-                //Response.Redirect("../../Login.aspx");
+                Response.Redirect("../../Login.aspx");
             }
         }
 

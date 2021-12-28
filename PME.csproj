@@ -93,6 +93,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Paginas\Gestion-Pedagogic\Estado-de-la-accion.aspx" />
     <Content Include="Paginas\Gestion-Pedagogic\Rendicion.aspx" />
+    <Content Include="Paginas\Gestion-Pedagogic\Seguimiento.aspx" />
     <Content Include="Paginas\Gestion-Pedagogic\Vista-Area.aspx" />
     <Content Include="Paginas\Inicio\Contacto.html" />
     <Content Include="Paginas\Inicio\Galería.html" />
@@ -128,6 +129,13 @@
     </Compile>
     <Compile Include="Paginas\Gestion-Pedagogic\Rendicion.aspx.designer.cs">
       <DependentUpon>Rendicion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Gestion-Pedagogic\Seguimiento.aspx.cs">
+      <DependentUpon>Seguimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Gestion-Pedagogic\Seguimiento.aspx.designer.cs">
+      <DependentUpon>Seguimiento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Gestion-Pedagogic\Vista-Area.aspx.cs">
       <DependentUpon>Vista-Area.aspx</DependentUpon>

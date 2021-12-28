@@ -78,6 +78,15 @@ namespace PME.Paginas.Gestion_Pedagogic
         protected global::System.Web.UI.WebControls.Button btnCerrarSesion;
 
         /// <summary>
+        /// Control btnCerrarSesion2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCerrarSesion2;
+
+        /// <summary>
         /// Control btnEnviarAccion.
         /// </summary>
         /// <remarks>

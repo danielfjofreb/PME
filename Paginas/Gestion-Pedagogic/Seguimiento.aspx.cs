@@ -7,13 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace PME.Paginas.Gestion_Pedagogic
 {
-    public partial class EstadoAccion : System.Web.UI.Page
+    public partial class Seguimiento : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (this.Session["user"] == null && this.Session["pass"] == null)
             {
-                //Response.Redirect("../../Login.aspx");
+                Response.Redirect("../../Login.aspx");
             }
         }
 
@@ -21,11 +21,6 @@ namespace PME.Paginas.Gestion_Pedagogic
         {
             this.Session.Clear();
             Response.Redirect("../../Login.aspx");
-        }
-
-        protected void btnEnviarAccion_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

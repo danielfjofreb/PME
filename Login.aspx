@@ -39,11 +39,11 @@
               <div class="u-form-select-wrapper">
                   <!--Select, se puede cambiar por un DropDownList de ser necesario-->
                   <asp:DropDownList ID="ddlCargo" runat="server" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
-                      <asp:ListItem>Encargado Gestion Pedagogica</asp:ListItem>
-                      <asp:ListItem>Coordinador PME</asp:ListItem>
-                      <asp:ListItem>Administrador</asp:ListItem>
-                      <asp:ListItem>Encargado de Liderazgo</asp:ListItem>
-                      <asp:ListItem>Encargado de Convivencia</asp:ListItem>
+                      <asp:ListItem Value="Pe">Encargado Gestion Pedagogica</asp:ListItem>
+                      <asp:ListItem Value="Cd">Coordinador PME</asp:ListItem>
+                      <asp:ListItem Value="Ad">Administrador</asp:ListItem>
+                      <asp:ListItem Value="Li">Encargado de Liderazgo</asp:ListItem>
+                      <asp:ListItem Value="Cv">Encargado de Convivencia</asp:ListItem>
                   </asp:DropDownList>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
@@ -67,7 +67,7 @@
         <p class="u-small-text u-text u-text-variant u-text-1">Plan de Mejoramiento Educativo<br>2021
         </p>
       </div></footer>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PlanMejoramientoEConnectionString %>" SelectCommand="SELECT * FROM [Usuarios] WHERE (([id_usuario] = @usuario) AND ([contraseña] = @contraseña))">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PlanMejoramientoEConnectionString %>" SelectCommand="SELECT * FROM [Usuarios] WHERE (([id_Area] = @usuario) AND ([contraseña] = @contraseña))">
         <SelectParameters>
             <asp:ControlParameter ControlID="ddlCargo" Name="usuario" PropertyName="SelectedValue" />
             <asp:ControlParameter ControlID="txtPass" Name="contraseña" PropertyName="Text" />

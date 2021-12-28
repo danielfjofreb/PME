@@ -11,17 +11,17 @@ namespace PME.Paginas.Gestion_Pedagogic
 {
 
 
-    public partial class Accion
+    public partial class Seguimiento
     {
 
         /// <summary>
-        /// Control FormAccion.
+        /// Control form1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm FormAccion;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// Control LinkVistaArea.
@@ -78,6 +78,15 @@ namespace PME.Paginas.Gestion_Pedagogic
         protected global::System.Web.UI.WebControls.Button btnCerrarSesion;
 
         /// <summary>
+        /// Control SqlDSSeguimiento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDSSeguimiento;
+
+        /// <summary>
         /// Control btnCerrarSesion2.
         /// </summary>
         /// <remarks>
@@ -87,30 +96,12 @@ namespace PME.Paginas.Gestion_Pedagogic
         protected global::System.Web.UI.WebControls.Button btnCerrarSesion2;
 
         /// <summary>
-        /// Control txtNombreAccion.
+        /// Control GVSeguimiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreAccion;
-
-        /// <summary>
-        /// Control GVAccion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVAccion;
-
-        /// <summary>
-        /// Control sqlDSAccion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlDSAccion;
+        protected global::System.Web.UI.WebControls.GridView GVSeguimiento;
     }
 }

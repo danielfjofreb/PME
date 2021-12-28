@@ -41,7 +41,7 @@
             <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><asp:HyperLink ID="LinkVistaArea" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px;" NavigateUrl="~/Paginas/Gestion-Pedagogic/Vista-Area.aspx">Vista Área</asp:HyperLink>
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkAccion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Accion.aspx" style="padding: 10px 22px;">Acción</asp:HyperLink>
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkEstadoAccion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Estado-de-la-Accion.aspx" style="padding: 10px 22px;">Estado de la Acción</asp:HyperLink>
-</li><li class="u-nav-item"><asp:HyperLink ID="LinkRendicion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="Rendición.html" style="padding: 10px 22px;">Rendición</asp:HyperLink>
+</li><li class="u-nav-item"><asp:HyperLink ID="LinkRendicion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Rendicion.aspx" style="padding: 10px 22px;">Rendición</asp:HyperLink>
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkSeguimiento" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Seguimiento.aspx" style="padding: 10px 22px;">Seguimiento</asp:HyperLink>
 </li><li class="u-nav-item"><asp:Button ID="btnCerrarSesion" runat="server" class="u-button-style u-file-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px" Text="Cerrar Sesión" OnClick="btnCerrarSesion_Click"/>
 </li></ul>
@@ -50,12 +50,12 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Vista-Área.html" style="padding: 10px 22px;">Vista Área</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Acción.html" style="padding: 10px 22px;">Acción</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Estado-de-la-Acción.html" style="padding: 10px 22px;">Estado de la Acción</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Rendición.html" style="padding: 10px 22px;">Rendición</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Seguimiento.html" style="padding: 10px 22px;">Seguimiento</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="files/perfil.png" style="padding: 10px 22px;">Cerrar Sesión</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Vista-Area.aspx" style="padding: 10px 22px;">Vista Área</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Accion.aspx" style="padding: 10px 22px;">Acción</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Estado-de-la-Accion.aspx" style="padding: 10px 22px;">Estado de la Acción</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Rendicion.aspx" style="padding: 10px 22px;">Rendición</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Seguimiento.aspx" style="padding: 10px 22px;">Seguimiento</a>
+</li><li class="u-nav-item"><asp:Button ID="btnCerrarSesion2" runat="server" class="u-button-style u-nav-link" style="padding: 10px 22px;" Text="Cerrar Sesión" OnClick="btnCerrarSesion_Click"/>
 </li></ul>
               </div>
             </div>
@@ -72,7 +72,11 @@
               <asp:TextBox runat="server" class="u-text u-text-2" ID="txtNombreAccion"/>
             <h6 class="u-text u-text-3">Recursos y cantidad</h6>
             <div class="u-table u-table-responsive u-table-1">
-              <table class="u-table-entity">
+
+                <asp:GridView runat="server" ID="GVAccion" class="u-table-entity" AutoGenerateColumns="False" DataSourceID="sqlDSAccion">
+
+                </asp:GridView>
+              <!--<table class="u-table-entity">
                 <colgroup>
                   <col width="66.5%">
                   <col width="33.5%">
@@ -101,13 +105,13 @@
                     <td class="u-border-1 u-border-grey-30 u-table-cell">42</td>
                   </tr>
                 </tbody>
-              </table>
+              </table>-->
             </div>
             <a href="https://localhost/k/retro-website-templates" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Enviar a validar</a>
           </div>
         </div>
       </div>
-        <asp:SqlDataSource ID="sqlDSAccion" runat="server" ConnectionString="<%$ ConnectionStrings:PlanMejoramientoEConnectionString %>" SelectCommand="SELECT * FROM [Acciones]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sqlDSAccion" runat="server" ConnectionString="<%$ ConnectionStrings:PlanMejoramientoEConnectionString %>" SelectCommand="SELECT Recursos.descripcionRecurso as 'Recurso', Expediente.cantidadRecurso as 'Cantidad' FROM Recursos INNER JOIN Expediente ON Recursos.idRecurso = Expediente.IDRecurso"></asp:SqlDataSource>
     </section>
     </form>
     

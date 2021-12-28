@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="../../css/Rendición.css" media="screen">
     <script class="u-script" type="text/javascript" src="../../js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="../../js/PlantillaGestionPedagogica.js" defer=""></script>
+    <script src="../../js/Extras.js"></script>
+    <script src="../../js/Extras.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"/>
     
     
@@ -23,6 +25,11 @@
 		"@type": "Organization",
 		"name": "Gestión Pedagógica"
 }</script>
+    <script>
+        $(document).ready(function () {
+            $('#' + "<%=FUAdjuntarFacturaR.ClientID%>").attr('accept', 'application/pdf');
+        })
+    </script>
     <meta property="og:title" content="Rendición"/>
     <meta property="og:type" content="website"/>
     <meta name="theme-color" content="#478ac9"/>
@@ -40,12 +47,12 @@
           </div>
             
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><asp:HyperLink runat="server" ID="LinkVistaArea" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Vista-Area.aspx" style="padding: 10px 22px;">Vista Área</asp:HyperLink>
-</li><li class="u-nav-item"><asp:HyperLink ID="LinkAccion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Accion.aspx">Acción</asp:HyperLink>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><asp:HyperLink ID="LinkVistaArea" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px;" NavigateUrl="~/Paginas/Gestion-Pedagogic/Vista-Area.aspx">Vista Área</asp:HyperLink>
+</li><li class="u-nav-item"><asp:HyperLink ID="LinkAccion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Accion.aspx" style="padding: 10px 22px;">Acción</asp:HyperLink>
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkEstadoAccion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Estado-de-la-Accion.aspx" style="padding: 10px 22px;">Estado de la Acción</asp:HyperLink>
-</li><li class="u-nav-item"><asp:HyperLink ID="LinkRendicion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Rendición.aspx" style="padding: 10px 22px;">Rendición</asp:HyperLink>
+</li><li class="u-nav-item"><asp:HyperLink ID="LinkRendicion" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Rendicion.aspx" style="padding: 10px 22px;">Rendición</asp:HyperLink>
 </li><li class="u-nav-item"><asp:HyperLink ID="LinkSeguimiento" runat="server" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" NavigateUrl="~/Paginas/Gestion-Pedagogic/Seguimiento.aspx" style="padding: 10px 22px;">Seguimiento</asp:HyperLink>
-</li><li class="u-nav-item"><asp:Button runat="server" ID="btnCerrarSesion" class="u-button-style u-file-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px;" Text="Cerrar Sesión" OnClick="btnCerrarSesion_Click"/>
+</li><li class="u-nav-item"><asp:Button ID="btnCerrarSesion" runat="server" class="u-button-style u-file-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" style="padding: 10px 22px" Text="Cerrar Sesión" OnClick="btnCerrarSesion_Click"/>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -105,7 +112,7 @@
               </table>
             </div>
               <p style="padding-left: 63%;padding-bottom: 2%;">Adjuntar factura de respaldo</p>
-            <asp:FileUpload ID="FUAdjuntarFacturaR" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-1" ToolTip="Adjuntar Factura Respaldo"/>
+            <asp:FileUpload ID="FUAdjuntarFacturaR" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-1" onchange="documento(this.id)" ToolTip="Adjuntar Factura Respaldo" accept=".doc,.docx,.pdf"/>
             <asp:Button ID="btnGuardarYAgregar" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2" Text="Guardar y agregar un nuevo recurso"/>
             <asp:Button  ID="btnGuardar" runat="server" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-3" Text="Guardar"/>
           </div>
